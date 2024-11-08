@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NuevoInmueble"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="?attr/colorSecondary"
+        android:textSize="30dp"
+        android:text="Registrar"
+        android:id="@+id/GuardarNuevoInmueble"
+        />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Scroll"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CampoDireccion"
+        android:text="Dirección:"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/EtiquetaDireccion"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CampoDireccion"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaDireccion"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaDireccion"
+        app:layout_constraintEnd_toStartOf="@+id/CampoSuperficie"
+        android:layout_marginTop="60dp"
+        android:text="Superficie:"
+        android:textSize="25dp"
+        android:id="@+id/EtiquetaSuperficie"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/CampoSuperficie"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@id/EtiquetaSuperficie2"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaDireccion"
+        app:layout_constraintTop_toBottomOf="@id/CampoDireccion"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/CampoSuperficie"
+        app:layout_constraintTop_toBottomOf="@id/CampoDireccion"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="m²"
+        android:textSize="25dp"
+        android:id="@+id/EtiquetaSuperficie2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaSuperficie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CampoPrecio"
+        android:text="Precio de alquiler: $"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/EtiquetaPrecio"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CampoPrecio"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaPrecio"
+        app:layout_constraintTop_toBottomOf="@id/CampoSuperficie"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaPrecio"
+        app:layout_constraintEnd_toStartOf="@id/MenuTipo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Tipo:"
+        android:textSize="25dp"
+        android:id="@+id/EtiquetaTipo"/>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuTipo"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/EtiquetaTipo"
+        app:layout_constraintTop_toBottomOf="@id/CampoPrecio"
+        android:spinnerMode="dropdown"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaTipo"
+        app:layout_constraintEnd_toStartOf="@id/MenuUso"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Uso:"
+        android:textSize="25dp"
+        android:id="@+id/EtiquetaUso"/>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuUso"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/EtiquetaUso"
+        app:layout_constraintTop_toBottomOf="@id/MenuTipo"
+        android:spinnerMode="dropdown"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaUso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CampoAmbientes"
+        android:text="Ambientes:"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/EtiquetaAmbientes"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CampoAmbientes"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaAmbientes"
+        app:layout_constraintTop_toBottomOf="@id/MenuUso"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaAmbientes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CampoLatitud"
+        android:text="Latitud:"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/EtiquetaLatitud"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CampoLatitud"
+        android:textSize="20dp"
+        android:inputType="numberSigned"
+        android:text="-33.00000"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaLatitud"
+        app:layout_constraintTop_toBottomOf="@id/CampoAmbientes"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EtiquetaLatitud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CampoLongitud"
+        android:text="Longitud:"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/EtiquetaLongitud"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CampoLongitud"
+        android:textSize="20dp"
+        android:inputType="numberSigned"
+        android:text="-66.00000"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EtiquetaLongitud"
+        app:layout_constraintTop_toBottomOf="@id/CampoLatitud"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imágen:"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/EtiquetaFoto"
+        app:layout_constraintBottom_toTopOf="@id/CampoFoto"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/CampoLongitud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/CampoFoto"
+        android:contentDescription="Imágen del inmueble."
+        android:src="@drawable/ic_menu_camera"
+        />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

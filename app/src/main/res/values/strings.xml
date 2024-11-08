@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Inmobiliaria Laboratorio 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Inmobiliaria Dotnet</string>
+    <string name="nav_header_subtitle">Perfil aquí</string>
+    <string name="nav_header_desc">Navigation header</string>f
+    <string name="action_settings">Ajustes (algún día)</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Perfil</string>
+    <string name="menu_slideshow">Inmuebles</string>
+    <string-array name="tipos_inmueble">
+        <item>Casa</item>
+        <item>Galpón</item>
+        <item>Local</item>
+        <item>Departamento</item>
+        <item>Terreno</item>
+    </string-array>
+    <string-array name="usos_inmueble">
+        <item>Personal</item>
+        <item>Comercial</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

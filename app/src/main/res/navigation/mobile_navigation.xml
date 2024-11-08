@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inmuebles">
+
+    <activity
+        android:id="@+id/nav_login"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.Login"
+        android:label="Iniciar Sesión"
+        tools:layout="@layout/activity_login"/>
+
+    <activity
+        android:id="@+id/nav_nuevo_perfil"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.NuevoPerfil"
+        android:label="Nueva Cuenta"
+        tools:layout="@layout/activity_nuevo_perfil"/>
+
+    <fragment
+        android:id="@+id/nav_inmuebles"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.Inmuebles"
+        android:label="Inmuebles"
+        tools:layout="@layout/fragment_inmuebles" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.Perfil"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil"/>
+
+    <fragment
+        android:id="@+id/nav_detalles_inmueble"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.DetallesInmueble"
+        android:label="Detalles del inmueble"
+        tools:layout="@layout/fragment_detalles_inmueble"/>
+
+    <fragment
+        android:id="@+id/nav_editar_perfil"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.EditarPerfil"
+        android:label="Editar Perfil"
+        tools:layout="@layout/fragment_editar_perfil"/>
+
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.Contratos"
+        android:label="Contratos"
+        tools:layout="@layout/fragment_contratos"/>
+    <fragment
+        android:id="@+id/nav_detalles_contrato"
+        android:name="com.arico.inmobiliarialaboratorio3.ui.DetallesContrato"
+        android:label="Detalles del contrato"
+        tools:layout="@layout/fragment_detalles_contrato"/>
+</navigation>
