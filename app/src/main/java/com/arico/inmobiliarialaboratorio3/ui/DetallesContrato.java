@@ -65,7 +65,7 @@ public class DetallesContrato extends Fragment {
                 CargarLista(pagos);
             }
         });
-        binder.DetallesInquilino.setText(contrato.getNombreInquilino());
+        binder.DetallesInquilino.setText("Locatario: " + contrato.getNombreInquilino());
 
         ViewModel.LeerPagosPorContrato(contrato.getIdContrato());
 
