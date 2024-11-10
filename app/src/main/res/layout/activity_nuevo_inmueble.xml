@@ -155,7 +155,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/CampoAmbientes"
         android:text="Ambientes:"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="25dp"
         android:layout_marginTop="30dp"
         android:id="@+id/EtiquetaAmbientes"/>
